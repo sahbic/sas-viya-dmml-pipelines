@@ -38,5 +38,5 @@ scored = dm_model.predict_proba(dm_inputdf)
 dm_scoreddf = pd.DataFrame(scored, columns=['P_' + dm_dec_target + level for level in dm_classtarget_level])
 
 # Register model
-with Session('http://sasserver.demo.sas.com', 'sasdemo', 'Orion123'):
-    register_model(dm_model, 'OS Node sklearn', '4. Manage credit models', input=X_train)
+with Session('http://sasserver.demo.sas.com', 'username', 'password'):
+    register_model(dm_model, 'OS Node sklearn', 'My MM Project Name', input=X_train)
